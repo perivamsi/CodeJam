@@ -28,27 +28,12 @@ namespace CodeJam
                     {
                         continue;
                     }
+
                     int[] candy = textReader.ReadLine().Split(' ').Select(x => int.Parse(x)).ToArray();
+                    int result = candy.Aggregate((current, next) => current ^ next);
+                    string str = (result == 0) ? (candy.Sum() - candy.Min()).ToString() : "NO";
 
-                    int result = candy[0];
-                    for (int j = 1; j < candy.Length; j++)
-                    {
-                        result = result ^ candy[j];
-                    }
-
-                    if (result != 0)
-                    {
-                        output.Append("NO");
-                    }
-                    else
-                    {
-                        Array.Sort(candy);
-                        int sum = candy.Sum();
-                        output.Append(sum - candy[0]);
-                    }
-
-                    output.Append("\n");
-
+                    output.Append(str).Append("\n");
                 }
 
                 Console.WriteLine(output);
