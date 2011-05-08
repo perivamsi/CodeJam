@@ -43,8 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="AlienLanguage.cs" />
+    <Compile Include="BotTrust.cs" />
+    <Compile Include="CandySplitting.cs" />
+    <Compile Include="CodeJam.cs" />
+    <Compile Include="Magicka.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReverseWords.cs" />
+    <Compile Include="StoreCredit.cs" />
+    <Compile Include="T9Spelling.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
